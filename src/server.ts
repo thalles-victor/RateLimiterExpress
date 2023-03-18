@@ -27,11 +27,9 @@ async function rateManyRequestMiddleWare(
     });
   }
 }
-
 /* -------------------------------------------------------- */
 
 /* ---------------API-------------------------------------- */
-
 app.get("/", rateManyRequestMiddleWare, (request, response) => {
   return response.status(200).json({
     message: "Hello api",
@@ -42,5 +40,4 @@ const SERVER_PORT = 3000;
 app.listen(SERVER_PORT, () => {
   console.log(`Server is running at http://localhost:${SERVER_PORT}`);
 });
-
 /* -------------------------------------------------------- */
